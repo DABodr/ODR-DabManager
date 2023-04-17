@@ -1,4 +1,4 @@
 # ODR-DabManager
 
-*install:
+# install:
 pip install PyQt5 numpy scipy pyqtgraph matplotlib sounddevice pyaudio pydub pyyaml
