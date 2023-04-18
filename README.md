@@ -37,14 +37,10 @@ pip3 install pyqt5
 2. Accédez au répertoire contenant le code source à l'aide d'un terminal ou d'une invite de commande.
 3. Exécutez le script principal avec la commande suivante :
 
-python3 main.py
+python3 ODR-DabManager-gui.py
 
 
-Assurez-vous de remplacer "main.py" par le nom que vous avez donné au fichier contenant le script de l'interface graphique.
 4. L'application DAB+ Multiplex Manager s'ouvre. Utilisez l'interface pour configurer vos stations de radio et démarrer le multiplex.
 
-## Licence
-
-Ce projet est sous licence [insérer la licence de votre choix ici, par exemple, MIT, GPL, etc.].
 
 
