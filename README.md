@@ -28,7 +28,7 @@ Pour installer les dépendances nécessaires, suivez les étapes ci-dessous :
 
 4. Utilisez pip pour installer PyQt5 :
 
-* pip3 install pyqt5
+* sudo pip3 install pyqt5
 
 
 ## Utilisation
