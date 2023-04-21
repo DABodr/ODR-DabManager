@@ -18,17 +18,17 @@ Pour installer les dépendances nécessaires, suivez les étapes ci-dessous :
 1. Ouvrez un terminal.
 2. Mettez à jour la liste des paquets disponibles :
 
-# sudo apt update
+* sudo apt update
 
 
 3. Installez Python 3 et pip (le gestionnaire de paquets Python) :
 
-# sudo apt install python3 python3-pip
+* sudo apt install python3 python3-pip
 
 
 4. Utilisez pip pour installer PyQt5 :
 
-# pip3 install pyqt5
+* pip3 install pyqt5
 
 
 ## Utilisation
@@ -37,7 +37,7 @@ Pour installer les dépendances nécessaires, suivez les étapes ci-dessous :
 2. Accédez au répertoire contenant le code source à l'aide d'un terminal ou d'une invite de commande.
 3. Exécutez le script principal avec la commande suivante :
 
-# python3 ODR-DabManager-gui.py
+* python3 ODR-DabManager-gui.py
 
 
 4. L'application DAB+ Multiplex Manager s'ouvre. Utilisez l'interface pour configurer vos stations de radio et démarrer le multiplex.
