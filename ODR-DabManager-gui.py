@@ -2,7 +2,6 @@ import sys
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QFileDialog, QInputDialog, QPushButton, QVBoxLayout, QWidget,
                              QLabel, QGridLayout, QLineEdit, QSpinBox, QGroupBox, QHBoxLayout, QMessageBox)
 import create_multiplex
-from create_multiplex import main as create_multiplex
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -81,28 +80,27 @@ class MainWindow(QMainWindow):
         create_multiplex.radio_stations.append(new_station)
         self.add_radio_row(len(create_multiplex.radio_stations) - 1)
 
-def remove_radio(self, index):
-    if len(create_multiplex.radio_stations) > 1:
-        create_multiplex.radio_stations.pop(index)
+    def remove_radio(self, index):
+        if len(create_multiplex.radio_stations) > 1:
+            create_multiplex.radio_stations.pop(index)
 
-        # Mettre à jour l'affichage
-        for i in reversed(range(self.radio_stations_layout.count())):
-            self.radio_stations_layout.itemAt(i).widget().setParent(None)
-        for i in range(len(create_multiplex.radio_stations)):
-            self.add_radio_row(i)
-    else:
-        QMessageBox.warning(self, "Suppression de station", "Au moins une station doit être présente dans le multiplex.")
+            # Mettre à jour l'affichage
+            for i in reversed(range(self.radio_stations_layout.count())):
+                self.radio_stations_layout.itemAt(i).widget().setParent(None)
+            for i in range(len(create_multiplex.radio_stations)):
+                self.add_radio_row(i)
+        else:
+            QMessageBox.warning(self, "Suppression de station", "Au moins une station doit être présente dans le multiplex.")
 
-def start_multiplex(self):
-    for station in create_multiplex.radio_stations:
-        if not station['input']:
-            QMessageBox.warning(self, "Fichier audio manquant", f"Veuillez sélectionner un fichier audio pour {station['name']}.")
-            return
+    def start_multiplex(self):
+        for station in create_multiplex.radio_stations:
+            if not station['input']:
+                QMessageBox.warning(self, "Fichier audio manquant", f"Veuillez sélectionner un fichier audio pour {station['name']}.")
 
-    create_multiplex.main() if name == 'main':
+        create_multiplex.main()  # Appel de la fonction create_multiplex.main()
+
 app = QApplication(sys.argv)
 main_window = MainWindow()
 main_window.show()
 sys.exit(app.exec_())
-
 
