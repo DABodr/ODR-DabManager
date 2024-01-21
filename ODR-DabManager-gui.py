@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QFileDialog, QInputDialog, QPushButton, QVBoxLayout, QWidget,
                              QLabel, QGridLayout, QLineEdit, QSpinBox, QGroupBox, QHBoxLayout, QMessageBox)
-
+import create_multiplex
 from create_multiplex import main as create_multiplex
 
 class MainWindow(QMainWindow):
@@ -99,7 +99,7 @@ def start_multiplex(self):
             QMessageBox.warning(self, "Fichier audio manquant", f"Veuillez sélectionner un fichier audio pour {station['name']}.")
             return
 
-    create_multiplex() if name == 'main':
+    create_multiplex.main() if name == 'main':
 app = QApplication(sys.argv)
 main_window = MainWindow()
 main_window.show()
