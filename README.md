@@ -23,7 +23,7 @@ Pour installer les dépendances nécessaires, suivez les étapes ci-dessous :
 
 3. Installez Python 3 et pip (le gestionnaire de paquets Python) :
 
-* sudo apt install python3 python3-pip qt5-qmake
+* sudo apt install python3 python3-pip python3-pyqt5 qt5-qmake
 
 4. Utilisez pip pour installer PyQt5 :
 
